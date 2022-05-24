@@ -20,31 +20,39 @@
     }
 
     function sel_paging_count(&$param) {
+
         $row_count = $param["row_count"];
+
         $sql = "SELECT CEIL(COUNT(i_board) / $row_count) as cnt
                   FROM t_board";
+
+        if($param["search_txt"] !== "") {
+            $sql .= " WHERE title LIKE '%{$param["search_txt"]}%'";            
+        } 
+
         $conn = get_conn();
         $result = mysqli_query($conn, $sql);
         mysqli_close($conn); 
-        $row = mysqli_fetch_assoc($result);
-        return $row["cnt"];
+        $row = mysqli_fetch_assoc($result); // 한번 실행하면 첫번째 레코드를 들고온다
+        return $row["cnt"]; // $row 배열 ["cnt"] 정수 
+ 
     }
-
-    function sel_board_list(&$param) {
-        $start_idx = $param["start_idx"];
-        $row_count = $param["row_count"];
-        $sql = "SELECT A.i_board, A.title, A.created_at,
-                       B.i_user, B.profile_img , B.nm
-                  FROM t_board A
-                 INNER JOIN t_user B
-                    ON A.i_user = B.i_user
-                 ORDER BY A.i_board DESC
-                 LIMIT $start_idx, $row_count";
-        $conn = get_conn();
-        $result = mysqli_query($conn, $sql);
-        mysqli_close($conn);
-        return $result;
-    }
+// 페이징
+function sel_board_list(&$param) {
+    $sql = "SELECT A.i_board, A.title, A.created_at
+                 , B.nm
+              FROM t_board A
+             INNER JOIN t_user B
+                ON A.i_user = B.i_user
+             WHERE A.title LIKE '%{$param["search_txt"]}%'
+             ORDER BY A.i_board DESC 
+             LIMIT {$param["s_idx"]}, {$param["row_count"]}";
+                     
+    $conn = get_conn();
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
 
     function sel_board(&$param) {
         $i_board = $param["i_board"];

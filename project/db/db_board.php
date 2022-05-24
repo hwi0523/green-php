@@ -152,7 +152,7 @@
 }
     function recipe_list()
     {     
-        $sql = "SELECT A.food_no, A.food_img, A.food_title, A.created_at,B.profile_img,A.food_view,
+        $sql = "SELECT A.food_no, A.food_img, A.food_title, A.created_at,B.profile_img,
                        B.nm, A.user_no 
                 FROM f_board A
                 INNER JOIN t_user B 

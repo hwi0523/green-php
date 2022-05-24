@@ -1,14 +1,14 @@
 <?php
     function print_sum(...$vals)
     {
-        /*
+        
         $sum = 0;
         for($i=0; $i<count($vals); $i++)
         {
             $val = $vals[$i];
             $sum += $val;
         }
-        */
+        
         foreach($vals as $val)
         {
             $sum += $val;
