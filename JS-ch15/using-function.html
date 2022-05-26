@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 호이스팅 Hoisting 맨위로 올라온다 
+        function addNumber(n1,n2){
+            var sum =n1 + n2;
+            document.write(`결괏값 : ${sum}`);
+        }
+        addNumber(10,20);
+        addNumber(20,5);
+        addNumber(90,-15);
+        // 값을 데리고오면 비 void 함수
+        // 값을 데리고 오지않으면 void 함수
+    </script>
+</body>
+</html>

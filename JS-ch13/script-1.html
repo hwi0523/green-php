@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">위 텍스트를 클릭해 보세요.</p>
+    <script>
+        var heading = document.querySelector('#heading'); // return 있음 비 void 함수
+    //  var heading = document.getElementById('heading');
+    //  var headingClassArr = document.getElementsByClassName('heading')    
+        heading.onclick =function(){
+            this.style.color ='red';
+        }
+
+        // document = 객체 (브라우저에서 체계적으로 관리한다) 
+        // 객체 = 속성 과 동작 (메소드)
+        // 속성 : 명사 , () 가 없어야 한다. /  메소드 : 동사
+        // 메소드 = () 가 들어간다. 
+        // querySelectorAll 배열로 넘어온다.
+    </script>
+</body>
+</html>
