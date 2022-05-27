@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>짝수 더하기</h1>
     <script>
-        var n =0;
-
-        for(var i=2;i<=10;i+=2)
-        {
-            n +=i;
-            document.write(`${i}-------${n}<br>`);
+        const obj ={
+            onclick: null
         }
-        // 1~10 까지 짝수만 더해서 결과값을 화면에 출력해 주세요.
+
+        obj.onclick =function(e){
+            console.log(e);
+            document.write('dd');
+        }
+        const e={
+            'tatget' : '누구냐',
+            x: 128,
+            y: 1111
+        }
+        obj.onclick(e);
     </script>
 </body>
 </html>

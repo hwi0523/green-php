@@ -11,16 +11,37 @@
 </head>
 <body>
     <ul>
-        <li><a href="#" onclick="changebg('green')">Green</a></li>
-        <li><a href="#" onclick="changebg(`Orange`)">Orange</a></li>
-        <li><a href="#" onclick="changebg('Purple')">Purple</a></li>
-    </ul>
-        <div id="result"></div>
-    <script>
-        function changebg(color){
-            const resultDiv = document.querySelector(`#result`);
-            resultDiv.style.backgroundColor = color;
-        }
-    </script>
+        <li><a href="#" id="first_a">Green</a></li>
+        <li><a href="#" id="second_a">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple');">Purple</a></li>
+    </ul> 
+    <div id="result"></div>
+
+        <script>
+            const resultDiv = document.querySelector('#result');
+    
+            function changeBg(color) {
+                resultDiv.style.backgroundColor = color;
+            }
+                
+            function changeOrange() {
+                resultDiv.style.backgroundColor = 'orange';
+            }
+    
+            const firstA = document.querySelector('#first_a');
+            firstA.onclick = function(e) {
+                changeBg('green');            
+            }
+    
+            function bindFn() {
+                return () => { // function . () => 둘다 됨
+                    resultDiv.style.backgroundColor ='orange';
+                }
+            }
+    
+            const secondA = document.querySelector('#second_a');
+            secondA.onclick = bindFn(); // bindFn() 함수 호출
+        </script>
+    
 </body>
 </html>

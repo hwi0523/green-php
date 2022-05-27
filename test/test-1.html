@@ -8,13 +8,15 @@
 </head>
 <body>
     <script>
-        var sumn = 10;
-        sum = 20;
-
-        console.log(sum);
-
-        // let = (상수) 한번만 선언
-        // conost
+        function calcsum(n){
+            let sum =0;
+            for(let i = 1; i<=n ;i++){
+                sum += i;
+            }
+            document.write(`1~${n}까지 더한 값은 ${sum}`);
+        }
+        calcsum(9);
+        //1~10까지 다 더한 값 : 55 
     </script>
 </body>
 </html>

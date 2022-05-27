@@ -8,12 +8,20 @@
 </head>
 <body>
     <script>
-        (function(){
-            document.write(`실행<br>`);
-        })
-        ();
+        // p.536       
+        (function(val) {
+            document.write(`val : ${val}<br>`);
+        })(10);
+
+        (function(as){
+            document.write(`as : ${as}<br>`);
+        })(50)
+
+        let dd = function(val) {
+            document.write(`val : ${val}`);
+        }
+        dd(10);
         // 즉시 실행 함수
-        
     </script>
 </body>
 </html>
