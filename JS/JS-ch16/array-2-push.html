@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,4,5,4,3,2,1];
+        console.log(arr);
+
+        arr.push(100); // push = 배열 맨 뒤에 값 추가
+        console.log(arr);
+
+        arr.unshift(90); // unshift = 배열에 맨 앞에 값 추가
+        console.log(arr);
+
+        const result = arr.pop(); // pop = 배열에 맨 마지막 값을 뺀다
+        console.log('result :' + result);
+        console.log(arr);
+
+        const result2 = arr.shift();
+        console.log('result2 :' + result2);
+        console.log(arr.toString());
+    </script>    
+</body>
+</html> 

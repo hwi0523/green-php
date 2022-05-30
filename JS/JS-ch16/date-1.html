@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const now = new Date();
+        console.log(now);
+        const date1 =new Date('2020-05-30 01:00:20');
+        console.log(date1);
+
+        console.log(date1.getFullYear()); // 년도
+        console.log(date1.getMonth()+1); // 월
+        console.log(date1.getDate());   // 일
+        console.log(date1.getDay());    // 요일 (일~토) 0 : 일 1 : 월
+        console.log(now.getTime());   //  1900~ 부터 흐른 시간
+        console.log(now.getHours());  // 시간
+        console.log(now.getMinutes()); // 분
+        console.log(now.getSeconds()); // 초
+        console.log(now.getMilliseconds()); // 밀리 초
+    </script>
+</body>
+</html>
