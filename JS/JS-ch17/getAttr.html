@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="prod-pic">
+        <button onclick="changepic();">이미지 바꾸기</button>
+        <img
+        src="/html/imagess/item_4.jpg" alt="감성" id="item" 
+        width="200" height="200" onclick="displaysrc()"; abc="안녕">
+    </div>
+    <script>
+       const item = document.querySelector(`#item`);
+       function changepic(){
+           // 누구의 무엇을 어떤값으로
+        //   item.src="/html/imagess/item_4.jpg";
+        item.setAttribute('src','/html/imagess/item_5.jpg');
+       }
+        function displaysrc(){
+            
+            console.log(`이미지 소스 getAttr` + item.getAttribute('src'));
+            console.log(`alt :` + item.alt);
+            console.log(`id :` + item.id);
+            console.log(`width :` + item.width);
+            console.log(`height :` + item.height);
+            console.log(`onclick :` + item.onclick);
+        }
+    </script>
+</body>
+</html>

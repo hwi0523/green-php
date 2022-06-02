@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #back{width: 100px; height: 100px;}
+    </style>
+</head>
+<body>
+    <button id="btnopen">창열기</button>
+    <button id="btnclose">창닫기</button>
+    <button onclick="movewin();">창 이동</button>
+    <div id="back"></div>
+    <script>
+        console.log('name : ' + window.name)
+        const btnopen = document.querySelector('#btnopen');
+        let newwin =null;
+        btnopen.addEventListener('click',() => {
+            newwin = open('notice.html','알림','width=500, height=400');
+        });
+
+        const btnclose = document.querySelector('#btnclose');
+        btnclose.addEventListener('click',() =>{
+            newwin.close();
+        });
+
+        function changeBack(){
+            const divBack = document.querySelector('#back');
+            divBack.style.backgroundColor = 'red';
+        }
+
+        function movewin(){
+            newwin.moveTo(0,0);
+        }
+    </script>
+</body>
+</html>

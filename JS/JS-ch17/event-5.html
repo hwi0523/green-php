@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/html/imagess/item_1.jpg" id="item">
+    <script>
+        const imgItem = document.querySelector('#item');
+        imgItem.addEventListener('mouseover',function(){
+            this.src ="/html/imagess/item_2.jpg"
+        });
+
+        imgItem.addEventListener('mouseout',function(){
+            this.src ='/html/imagess/item_1.jpg'
+        });
+    </script>
+</body>
+</html>

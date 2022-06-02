@@ -8,7 +8,51 @@
 </head>
 <body>
     <script>
+        Math.PI = 'aaa';
         console.log(Math.PI);
+        console.log(Math.ceil(12.1));
+        console.log(Math.round(12.1));
+        console.log(Math.round(12.5));
+        console.log(Math.floor(12.9));
+        console.log(Math.random());
+        console.log(Math.random());
+
+
+        // 0~9
+        const rVal = Math.floor(Math.random() * 10);
+        console.log(rVal);
+
+        // 1~9
+        const abc = Math.ceil(Math.random() * 9  );
+        console.log(abc);
+
+        //10 ~ 20
+        const val9 = Math.floor(Math.random() * 11 ) +10;
+        console.log(val9);
+
+        // 25~ 50
+        const val4 = Math.floor(Math.random() * 26 ) +25;
+        console.log(val4);
+
+        // 25~ 40
+        const val5 = Math.floor(Math.random() * 16 ) +25;
+        console.log(val5);
+
+        // 0 ~ 20
+        const val6 = Math.floor(Math.random() * 21 );
+        console.log(val6);
+        
+        // while(true){
+        //     const val4 = Math.floor(Math.random() * 26 ) +24;
+            
+        //     if(val4 <25 || val4 >50){
+        //         console.log('잘못만듬');
+        //         break;
+        //     }
+        // }
+
+        // Math.floor(Math.random() * (max - min + 1)) + min
+
     </script>
 </body>
 </html>

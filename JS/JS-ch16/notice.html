@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="aclose">닫기</button>
     <script>
-        const arr = [1,2,3,4,5,4,3,2,1];
-        const result = arr.join('');
-        console.log(result);
-        // 배열을 문자열로 바꾸고
-        // 해당조건으로 배열을 나열한다.
+        console.log(window.name);
+        opener.changeBack();
+
+       
+        const aclose = document.querySelector('#aclose');
+        aclose.addEventListener('click',() =>{
+            window.close();
+        });
     </script>
 </body>
 </html>

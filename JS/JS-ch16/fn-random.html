@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
-        const arr = [1,2,3,4,5,4,3,2,1];
-        const result = arr.join('');
+        function randomValue(sVal,eVal){
+        return Math.floor(Math.random() * (eVal - sVal + 1)) + sVal;
+        }
+        const result = randomValue(15,29);
         console.log(result);
-        // 배열을 문자열로 바꾸고
-        // 해당조건으로 배열을 나열한다.
+    // Math.floor(Math.random() * (max - min + 1)) + min
     </script>
 </body>
 </html>

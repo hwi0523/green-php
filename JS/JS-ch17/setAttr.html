@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mian{width: 500px; height: 300px;}
+        #main > img {width: 100%;}
+        #sub{width: 500px; height: 100px; display: flex;}
+        #sub > img {flex-grow: 1;}
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <img src="/html/imagess/item_1.jpg" id="item">
+    </div>
+    <div id="sub">
+        <img src="/html/imagess/item_1.jpg"  onclick="changepic3();">
+        <img src="/html/imagess/item_2.jpg"  onclick="changepic2();">
+        <img src="/html/imagess/item_3.jpg"  onclick="changepic();">
+    </div>
+    <script>
+        const imgMain = document.querySelector('#main > img');
+        console.log(imgMain);
+
+        const subImgs = document.querySelectorAll('#sub > img');
+        console.log(subImgs);
+        subImgs.forEach(mas =>{
+            mas.addEventListener('click',function(){
+                imgMain.src = mas.src; // mas 대신 this 써도 됨
+            });
+        })
+    //     const item = document.querySelector(`#item`);
+    //     function changepic(){
+
+    //     item.setAttribute('src','/html/imagess/item_3.jpg')
+    //    }
+
+    //    function changepic2(){
+
+    //     item.setAttribute('src','/html/imagess/item_2.jpg')
+    //     }
+
+    //     function changepic3(){
+
+    //     item.setAttribute('src','/html/imagess/item_1.jpg')
+    //     } 
+    </script>
+</body>
+</html>
