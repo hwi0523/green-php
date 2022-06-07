@@ -11,33 +11,39 @@
 </head>
 <body>
     <h1>web programming</h1>
-    <p> 공부할 주제를 기록해 주세요.var 1</p>
+    <p> 공부할 주제를 기록해 주세요.var 3</p>
     <div>
         <input type="text" id="subject">
         <input type="button" value="추가" onclick="newReg();">
+        <input type="number" id="delldx" style="width:30px;" value="1">
         <input type="button" value="삭제" onclick="delsubject();">
     </div>
     <div id="itemList"></div>
     <script>
             const inputsubject = document.querySelector('#subject');
+            const inputDelIdx = document.querySelector('#delldx');
             const divItemList = document.querySelector('#itemList');
+
+            inputsubject.addEventListener('keyup',function(e){
+                console.log(e.keyCode);
+                if(e.keyCode === 13){
+                    newReg();
+                }
+            })
 
             function newReg(){
                 const txt = inputsubject.value;
                 const newP = document.createElement('p');
-                newP.addEventListener('click',function(){
-                this.remove();
-            });
-                newP.classList.add('c_pointer');
                 divItemList.appendChild(newP);
                 newP.innerText =txt;
                 inputsubject.value = '';
             }
 
             function delsubject(){
-                divItemList.lastChild.remove();
-                // const del = document.querySelector('#itemList > p:last-child');
-                // del.remove();
+                const delldx = Number(inputDelIdx.value);
+                console.log(divItemList.children);
+                // divItemList.removeChild(divItemList.children[delldx-1]);
+                divItemList.children[delldx-1].remove();
             }
 
             
