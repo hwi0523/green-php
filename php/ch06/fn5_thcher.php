@@ -15,7 +15,7 @@
         if($i != $s){print ",";}
         print $i;
     }
-    print "]"
+    print "]";
  }
 
 

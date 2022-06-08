@@ -4,10 +4,10 @@
     define("STAND_AGE",25);  
     // 상수 const vs 리터럴 literal  (상수는 바꿀수없다 )
     // 앞 상수 뒤 리터럴
-    print NAME;
-    print NAME2;
-    print STAND_AGE;
-    print "---------<br>";
+    print NAME ."<br>";
+    print NAME2 ."<br>";
+    print STAND_AGE ."<br>";
+    print "-----------------<br>";
     function fn1()
     {
         print "fn1 :" . NAME . "<br>";

@@ -17,7 +17,7 @@
     $day =gmdate("d");
     $hours =gmdate("H");
     $min =gmdate("i");
-    $sec =gmdate("s");
+    $sec =gmdate("s"); // gmt 세계 표준 시간
 
     print "현재시간 ${year}년${mon}월${day}일 ${hours}:${min}:${sec} <br>";
 

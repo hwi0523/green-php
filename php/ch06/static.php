@@ -12,10 +12,10 @@
         inc();
     }
     
-    $z =1;
+    $z =100;
     function inc2()
     {
-        global $z;
+        global $z; // glocal 을 사용하여야 땡겨서 쓸수있다.
         print $z . "<br>";
         $z +=1;
     }
