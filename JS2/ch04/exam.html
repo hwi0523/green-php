@@ -19,17 +19,16 @@
             '5': 56,
             '6': 47,
             'length': 7,
-            'forEach' : function(cb){
-                for(let i = 0; i<this.length; i++){
+            'forEach': function(cb){
+                for(let i=0; i<this.length; i++){
                     cb(this[i],i);
                 }
             },
             'map': function(cb){
-                const tempArr =[];
-               for(let i =0; i<this.length; i++){
-                   tempArr.push(cb(this[i],i));
-               }
-    
+                const tempArr = [];
+                for(let i=0; i<this.length;i++){
+                    tempArr.push(cb(this[i],i));
+                }
                 return tempArr;
             },
             'filter' : function(cb){
@@ -56,7 +55,7 @@
             }
         }
 
-        console.log(myArr.toString());
+        console.log(myArr);
 
 
     </script>
