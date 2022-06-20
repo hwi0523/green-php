@@ -19,8 +19,8 @@
             '5': 56,
             '6': 47,
             'length': 7,
-            'forEach': function(cb){
-                for(let i=0; i<this.length; i++){
+            'forEach' : function(cb){
+                for(let i = 0; i<this.length; i++){
                     cb(this[i],i);
                 }
             },
@@ -56,8 +56,14 @@
         }
 
         console.log(myArr);
+        console.log('---------------');
 
-
+        let sum_odd = 0;
+        myArr.forEach(function(item){
+            if(item % 2 == 0)
+            sum_odd += item;                                                                                                               
+        });
+        console.log(`짝수 전체 더함 : ${sum_odd}`);
     </script>
 </body>
 
